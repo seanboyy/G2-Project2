@@ -13,7 +13,7 @@ using System.Collections;
 /// - Add FPSInputController script to the capsule
 ///   -> A CharacterMotor and a CharacterController component will be automatically added.
 
-/// - Create a camera. Make the camera a child of the capsule. Reset it's transform.
+/// - Create a camera. Make the camera a child of the capsule. Reset its transform.
 /// - Add a MouseLook script to the camera.
 ///   -> Set the mouse look to use LookY. (You want the camera to tilt up and down like a head. The character already turns.)
 [AddComponentMenu("Camera-Control/Mouse Look")]
@@ -32,6 +32,8 @@ public class MouseLook : MonoBehaviour
     public float minimumY = -60F;
     public float maximumY = 60F;
 
+    private Camera attachedCamera;
+
     float rotationY = 0F;
 
     void Update()
@@ -45,18 +47,20 @@ public class MouseLook : MonoBehaviour
                 rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
                 rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
 
-                transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+                attachedCamera.transform.localEulerAngles = new Vector3(-rotationY, 0, 0);
+                transform.localEulerAngles = new Vector3(0, rotationX, 0);
             }
             else if (axes == RotationAxes.MouseX)
             {
-                transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
+                attachedCamera.transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityX, 0);
             }
             else
             {
                 rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
                 rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
 
-                transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
+                attachedCamera.transform.localEulerAngles = new Vector3(-rotationY, 0, 0);
+                transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
             }
         }
         else if(!lockCameraWithMouse)
@@ -68,7 +72,8 @@ public class MouseLook : MonoBehaviour
                 rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
                 rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
 
-                transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+                attachedCamera.transform.localEulerAngles = new Vector3(-rotationY, 0, 0);
+                transform.localEulerAngles = new Vector3(0, rotationX, 0);
             }
             else if (axes == RotationAxes.MouseX)
             {
@@ -79,7 +84,8 @@ public class MouseLook : MonoBehaviour
                 rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
                 rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
 
-                transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
+                attachedCamera.transform.localEulerAngles = new Vector3(-rotationY, 0, 0);
+                transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
             }
         }
     }
@@ -92,5 +98,6 @@ public class MouseLook : MonoBehaviour
         // Make the rigid body not change rotation
         //if (rigidbody)
         //rigidbody.freezeRotation = true;
+        attachedCamera = GetComponentInChildren<Camera>();
     }
 }
