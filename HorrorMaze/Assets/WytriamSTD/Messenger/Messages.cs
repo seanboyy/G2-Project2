@@ -1,5 +1,6 @@
 ﻿public static class Messages
 {
+    public const string OBELISK_TOUCHED = "Player touched obelisk and should go to maze";
     public const string BOSS_ROOM = "Boss Room Entered";
     public const string PLAYER_DIED = "Player died and should return to spawn";
     public const string RESPAWN = "Player has returned to spawn";
