@@ -43,9 +43,10 @@ public class PlayerTracker : MonoBehaviour
                 }
                 if (!visited.Contains(otherGO))
                 {
+                    visited.Add(otherGO);
                     Debug.Log("Maze Location Pushed to visited");
                     Debug.Log(visited.Count.ToString() + " Locations visited");
-                    visited.Add(otherGO);
+                    // total maze tiles is 238
                     if (visited.Count == 238)
                         Messenger.Broadcast(Messages.MAZE_EXPLORED);
                 }
