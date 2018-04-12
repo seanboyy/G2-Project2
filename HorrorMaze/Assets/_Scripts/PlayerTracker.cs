@@ -28,24 +28,25 @@ public class PlayerTracker : MonoBehaviour
             if (otherMS != null)
             {
                 mazeLoc = otherMS.mazeLoc;
-                Debug.Log("Player entered " + mazeLoc);
+                //Debug.Log("Player entered " + mazeLoc);
                 otherMS.Reveal();
                 // keep track of where the player has been.
                 if (pathToSpawn.Count != 0 && pathToSpawn.Peek() == otherGO)
                 {
-                    Debug.Log("Maze Location Popped from pathToSpawn");
+                    //Debug.Log("Maze Location Popped from pathToSpawn");
                     pathToSpawn.Pop();
                 }
                 else
                 {
-                    Debug.Log("Maze Location Pushed to pathToSpawn");
+                    //Debug.Log("Maze Location Pushed to pathToSpawn");
                     pathToSpawn.Push(otherGO);
                 }
-                if (!visited.Contains(otherGO))
+                if (visited.Count != 238 && !visited.Contains(otherGO))
                 {
-                    Debug.Log("Maze Location Pushed to visited");
-                    Debug.Log(visited.Count.ToString() + " Locations visited");
                     visited.Add(otherGO);
+                    //Debug.Log("Maze Location Pushed to visited");
+                    //Debug.Log(visited.Count.ToString() + " Locations visited");
+                    // total maze tiles is 238
                     if (visited.Count == 238)
                         Messenger.Broadcast(Messages.MAZE_EXPLORED);
                 }
