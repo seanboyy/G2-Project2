@@ -12,6 +12,8 @@ public class PlayerTracker : MonoBehaviour
     {
         pathToSpawn = new Stack<GameObject>();
         visited = new List<GameObject>();
+        Messenger.AddListener(Messages.PLAYER_DIED, DoReturnToSpawn);
+
     }
 
     void OnTriggerEnter(Collider coll)
@@ -50,8 +52,23 @@ public class PlayerTracker : MonoBehaviour
                     if (visited.Count == 238)
                         Messenger.Broadcast(Messages.MAZE_EXPLORED);
                 }
+                if (otherMS.mazeLoc == MazeLocation.boss_room)
+                {
+                    Messenger.Broadcast(Messages.BOSS_ROOM);
+                }
             }
         }
+        if (otherGO.tag == "Collectible")
+        {
+            Constants.instance.hasCollectible = true;
+            Destroy(otherGO);
+        }
+
+    }
+
+    void DoReturnToSpawn()
+    {
+        StartCoroutine("ReturnToSpawn");
     }
 
     IEnumerator ReturnToSpawn()
@@ -60,7 +77,9 @@ public class PlayerTracker : MonoBehaviour
         {
             GameObject tempGO = pathToSpawn.Pop();
             this.gameObject.transform.position = tempGO.transform.position;
+            yield return new WaitForSeconds(1);
         }
+        Messenger.Broadcast(Messages.RESPAWN);
         yield return null;
     }
 }
