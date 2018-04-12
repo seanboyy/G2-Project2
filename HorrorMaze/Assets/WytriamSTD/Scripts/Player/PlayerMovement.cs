@@ -11,6 +11,12 @@ public class PlayerMovement : MonoBehaviour {
     private bool allowMovement = true;
     private Vector3 moveDirection = Vector3.zero;
 
+    void Awake()
+    {
+        Messenger.AddListener(Messages.PLAYER_DIED, ToggleMovement);
+        Messenger.AddListener(Messages.RESPAWN, ToggleMovement);
+    }
+
     // Use this for initialization
     void Start()
     {
