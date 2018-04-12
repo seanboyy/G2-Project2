@@ -12,6 +12,7 @@ public enum MazeLocation
     puzzle_room,
     trap,
     collectible_room,
+    mystery_room,
     loop1,
     loop2,
     loop3,
