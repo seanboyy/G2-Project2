@@ -33,10 +33,10 @@ public class PlayerTracker : MonoBehaviour
                 //Debug.Log("Player entered " + mazeLoc);
                 otherMS.Reveal();
                 // keep track of where the player has been.
-                if (pathToSpawn.Count != 0 && pathToSpawn.Peek() == otherGO)
+                if (pathToSpawn.Count != 0 && pathToSpawn.Contains(otherGO))
                 {
-                    //Debug.Log("Maze Location Popped from pathToSpawn");
-                    pathToSpawn.Pop();
+                    while (pathToSpawn.Peek() != otherGO)
+                        pathToSpawn.Pop();
                 }
                 else
                 {

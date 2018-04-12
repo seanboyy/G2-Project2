@@ -11,4 +11,9 @@ public class Util : MonoBehaviour
             child.gameObject.layer = layer;
         }
     }
+
+    public static int getRandomNumber()
+    {
+        return 4;
+    }
 }

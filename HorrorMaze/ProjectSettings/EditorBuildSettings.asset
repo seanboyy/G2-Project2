@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/sandbox.unity
+    guid: 51aabf742014e3843a05db17a5dfff61
+  - enabled: 1
+    path: Assets/Scenes/maze.unity
+    guid: e9929e55a10b56b46a8232a775479718
