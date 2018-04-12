@@ -77,7 +77,7 @@ public class PlayerTracker : MonoBehaviour
         {
             GameObject tempGO = pathToSpawn.Pop();
             this.gameObject.transform.position = tempGO.transform.position;
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.1f);
         }
         Messenger.Broadcast(Messages.RESPAWN);
         yield return null;

@@ -7525,6 +7525,16 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23640739781686124, guid: 442a923deac6cb34fbd4117a99d3d581,
+        type: 2}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23640739781686124, guid: 442a923deac6cb34fbd4117a99d3d581,
+        type: 2}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 442a923deac6cb34fbd4117a99d3d581, type: 2}
   m_IsPrefabParent: 0
