@@ -9,6 +9,7 @@ TagManager:
   - Collectible
   - Eye
   - Lore
+  - Puzzle
   layers:
   - Default
   - TransparentFX

@@ -57,6 +57,10 @@ public class MouseLook : MonoBehaviour
                 {
                     Dialogue.getInstance().Display(go.GetComponent<Lore>().lore);
                 }
+                if (go.tag == "Puzzle")
+                {
+                    go.GetComponent<Puzzle>().door.SetActive(false);
+                }
             }
         }
 
