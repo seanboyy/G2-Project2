@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Collectible
   - Eye
+  - Lore
   layers:
   - Default
   - TransparentFX

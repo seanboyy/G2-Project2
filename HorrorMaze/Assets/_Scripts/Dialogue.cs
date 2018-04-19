@@ -37,12 +37,14 @@ public class Dialogue : MonoBehaviour
     void Update ()
     {
         if (!isPrinting && dialogueText.enabled)
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Mouse1))
                 ToggleDialogueDisplay();
 	}
 
     public void Display(string message)
     {
+        // uncomment this to keep dialogue text reasonable
+        //if (isPrinting) return;
         StartCoroutine(PrintDisplay(message));
     }
 
@@ -57,7 +59,7 @@ public class Dialogue : MonoBehaviour
             dialogueText.text += c;
             yield return new WaitForSeconds(2.0f/msg.Length);
         }
-        dialogueText.text += "\n\nPress 'Enter' to Close this Window";
+        dialogueText.text += "\n\nPress 'Enter' or Click the Right Mouse Button to Close this Window";
         isPrinting = false;
     }
 

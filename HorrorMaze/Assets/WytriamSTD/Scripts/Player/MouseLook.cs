@@ -38,6 +38,33 @@ public class MouseLook : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ToggleCursor();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            // Spherecast
+            Ray ray = new Ray(gameObject.transform.position, gameObject.transform.forward);
+            RaycastHit hitInfo;
+            Physics.SphereCast(ray, 2f, out hitInfo);
+            if (hitInfo.collider != null)   // we got a hit
+            {
+                Debug.Log("User clicked on " + hitInfo.collider.gameObject.name);
+                GameObject go = hitInfo.collider.gameObject;
+                if (go.tag == "Lore")
+                {
+                    Dialogue.getInstance().Display(go.GetComponent<Lore>().lore);
+                }
+            }
+        }
+
+
+        // don't let the player move the camera if the cursor is visible
+        if (Cursor.visible)
+            return;
+
         if (lockCameraWithMouse && Input.GetKey(KeyCode.Mouse1))   //only move the camera if the right mouse button is being held. 
         {
             if (axes == RotationAxes.MouseXAndY)
@@ -99,5 +126,27 @@ public class MouseLook : MonoBehaviour
         //if (rigidbody)
         //rigidbody.freezeRotation = true;
         attachedCamera = GetComponentInChildren<Camera>();
+        HideCursor();
+    }
+
+    // locks and hides the cursor
+    void HideCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    void ShowCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    void ToggleCursor()
+    {
+        if (Cursor.visible)
+            HideCursor();
+        else
+            ShowCursor();
     }
 }
