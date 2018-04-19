@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour {
     public float speed = 4.0f;
     public float gravity = 20.0f;
     public float jumpSpeed = 8.0f;
+    public float sprintMultiplier = 2.0f;
 
     private CharacterController characterController;
     private bool allowMovement = true;
@@ -36,6 +37,10 @@ public class PlayerMovement : MonoBehaviour {
                 moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
                 moveDirection = transform.TransformDirection(moveDirection);
                 moveDirection *= speed;
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    moveDirection *= sprintMultiplier;
+                }
                 if (Input.GetButton("Jump"))
                     moveDirection.y = jumpSpeed;
             }
