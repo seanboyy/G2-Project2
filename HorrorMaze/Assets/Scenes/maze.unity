@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 684278979}
-  m_IndirectSpecularColor: {r: 0.15873697, g: 0.22321412, b: 0.27027622, a: 1}
+  m_IndirectSpecularColor: {r: 0.15873381, g: 0.2232216, b: 0.27029684, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -20798,7 +20798,7 @@ Prefab:
     - target: {fileID: 114621243785703808, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e,
         type: 2}
       propertyPath: mazeLoc
-      value: 6
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 4036601052972970, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
       propertyPath: m_LocalRotation.x

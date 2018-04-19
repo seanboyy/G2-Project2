@@ -8,4 +8,5 @@
     public const string MAZE_EXPLORED = "All tiles explored";
     public const string SLOW_LEARNER = "Player has died to the boss 5 times";
     public const string BOSS_DEFEATED = "Player entered boss room with collectible and beat the boss";
+    public const string GOO = "The Mystery Thickens";
 }

@@ -30,7 +30,6 @@ public class PlayerTracker : MonoBehaviour
             if (otherMS != null)
             {
                 mazeLoc = otherMS.mazeLoc;
-                //Debug.Log("Player entered " + mazeLoc);
                 otherMS.Reveal();
                 // keep track of where the player has been.
                 if (pathToSpawn.Count != 0 && pathToSpawn.Contains(otherGO))
@@ -40,17 +39,18 @@ public class PlayerTracker : MonoBehaviour
                 }
                 else
                 {
-                    //Debug.Log("Maze Location Pushed to pathToSpawn");
                     pathToSpawn.Push(otherGO);
                 }
                 if (visited.Count != 238 && !visited.Contains(otherGO))
                 {
                     visited.Add(otherGO);
-                    //Debug.Log("Maze Location Pushed to visited");
-                    //Debug.Log(visited.Count.ToString() + " Locations visited");
                     // total maze tiles is 238
                     if (visited.Count == 238)
                         Messenger.Broadcast(Messages.MAZE_EXPLORED);
+                    if (mazeLoc == MazeLocation.GOO)
+                    {
+
+                    }
                 }
                 if (otherMS.mazeLoc == MazeLocation.boss_room)
                 {

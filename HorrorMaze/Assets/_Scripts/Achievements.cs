@@ -7,7 +7,8 @@ public enum AchievementsEnum
     cartographer,
     slow_learner,
     maze_runner,
-    something_weird
+    something_weird, 
+    GOO
 }
 
 /// <summary>
@@ -77,8 +78,16 @@ public class Achievements : WytriamSTD.Scene_Manager
             announce("ACHEIVEMENT GET: SLOW LEARNER\nRespawn five times");
             achievements.Add(AchievementsEnum.slow_learner);
         }
-
-
     }
 
+    void GOO()
+    {
+        if (achievements.Count == 0 || !achievements.Contains(AchievementsEnum.GOO))
+        {
+            announce("ACHEIVEMENT GET: Eye Got an Eye on You\nDiscover the Great Old One");
+            achievements.Add(AchievementsEnum.GOO);
+
+        }
+
+    }
 }
