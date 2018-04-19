@@ -1,2 +1,4 @@
-Burn Down Chart: https://docs.google.com/spreadsheets/d/1Mnb-hSYnC7FNr3lhKN4kUprcRMszBoDwPZciwo14QWQ/edit#gid=0
+Burn Down Chart: https://docs.google.com/spreadsheets/d/1Mnb-hSYnC7FNr3lhKN4kUprcRMszBoDwPZciwo14QWQ/edit?usp=sharing
+	(there's a sprint 2 sheet)
 Build Video 1: https://youtu.be/dm1bUDEfWp8
+Build Video 2: https://youtu.be/17sYXm1b4EI
