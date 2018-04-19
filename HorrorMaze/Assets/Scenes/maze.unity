@@ -2587,6 +2587,57 @@ Transform:
   m_PrefabParentObject: {fileID: 4710509621705052, guid: c53711556c1d0004daa62486c9dd90bb,
     type: 2}
   m_PrefabInternal: {fileID: 172148210}
+--- !u!1001 &177414277
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4338123812384502, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338123812384502, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338123812384502, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -105
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338123812384502, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338123812384502, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338123812384502, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338123812384502, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338123812384502, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726562944475336, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
+      propertyPath: m_Name
+      value: LoreSphere1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114489411435400730, guid: b00d4fc2b3f169e41986a1969198cc37,
+        type: 2}
+      propertyPath: lore
+      value: Bring the Many-Toothed One an Offering
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &180043170
 Prefab:
   m_ObjectHideFlags: 0
@@ -2865,7 +2916,7 @@ Prefab:
     - target: {fileID: 114832348757336572, guid: 00320ac70830cfe46bcca580fae0f5a8,
         type: 2}
       propertyPath: mazeLoc
-      value: 26
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 4894764241752390, guid: 00320ac70830cfe46bcca580fae0f5a8, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2895,6 +2946,24 @@ Transform:
   m_PrefabParentObject: {fileID: 4724406663435596, guid: 00320ac70830cfe46bcca580fae0f5a8,
     type: 2}
   m_PrefabInternal: {fileID: 187741607}
+--- !u!1 &187741609 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1773467690780398, guid: 00320ac70830cfe46bcca580fae0f5a8,
+    type: 2}
+  m_PrefabInternal: {fileID: 187741607}
+--- !u!114 &187741610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 187741609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a653c12432cbe1b478887e692562480f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lore: 'The Lord of the Sea has many teeth. '
+  collected: 0
 --- !u!1001 &189533674
 Prefab:
   m_ObjectHideFlags: 0
@@ -4140,7 +4209,7 @@ Prefab:
     - target: {fileID: 224975757099549500, guid: 999086e81011884449cec98ee66256dd,
         type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 224975757099549500, guid: 999086e81011884449cec98ee66256dd,
         type: 2}
@@ -4194,6 +4263,57 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 999086e81011884449cec98ee66256dd, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &340595258
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4338123812384502, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338123812384502, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338123812384502, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338123812384502, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338123812384502, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338123812384502, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338123812384502, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338123812384502, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726562944475336, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
+      propertyPath: m_Name
+      value: LoreSphere1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114489411435400730, guid: b00d4fc2b3f169e41986a1969198cc37,
+        type: 2}
+      propertyPath: lore
+      value: 'The Lord of the Sea has many teeth. '
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &346147969
 Prefab:
@@ -6047,7 +6167,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &557449501
 Prefab:
@@ -7586,6 +7706,48 @@ Transform:
   m_PrefabParentObject: {fileID: 4705583262786192, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e,
     type: 2}
   m_PrefabInternal: {fileID: 732330897}
+--- !u!1001 &737337323
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4981605938807506, guid: 8f0bcd0e2b886c24ebc1ea9d67649d77, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4981605938807506, guid: 8f0bcd0e2b886c24ebc1ea9d67649d77, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4981605938807506, guid: 8f0bcd0e2b886c24ebc1ea9d67649d77, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4981605938807506, guid: 8f0bcd0e2b886c24ebc1ea9d67649d77, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4981605938807506, guid: 8f0bcd0e2b886c24ebc1ea9d67649d77, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4981605938807506, guid: 8f0bcd0e2b886c24ebc1ea9d67649d77, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4981605938807506, guid: 8f0bcd0e2b886c24ebc1ea9d67649d77, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4981605938807506, guid: 8f0bcd0e2b886c24ebc1ea9d67649d77, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8f0bcd0e2b886c24ebc1ea9d67649d77, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &737563583
 GameObject:
   m_ObjectHideFlags: 0
@@ -8936,7 +9098,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4738070313193920, guid: 442a923deac6cb34fbd4117a99d3d581, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 114152366598333200, guid: 442a923deac6cb34fbd4117a99d3d581,
         type: 2}
@@ -13110,7 +13272,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1279538541
 GameObject:
@@ -14261,7 +14423,7 @@ Prefab:
     - target: {fileID: 114832348757336572, guid: 00320ac70830cfe46bcca580fae0f5a8,
         type: 2}
       propertyPath: mazeLoc
-      value: 23
+      value: 28
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 00320ac70830cfe46bcca580fae0f5a8, type: 2}
@@ -14271,6 +14433,24 @@ Transform:
   m_PrefabParentObject: {fileID: 4724406663435596, guid: 00320ac70830cfe46bcca580fae0f5a8,
     type: 2}
   m_PrefabInternal: {fileID: 1375631630}
+--- !u!1 &1375631632 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1773467690780398, guid: 00320ac70830cfe46bcca580fae0f5a8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1375631630}
+--- !u!114 &1375631633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1375631632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a653c12432cbe1b478887e692562480f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lore: Bring the Many-Toothed One an Offering
+  collected: 0
 --- !u!1001 &1382906988
 Prefab:
   m_ObjectHideFlags: 0

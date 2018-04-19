@@ -51,6 +51,10 @@ public class PlayerTracker : MonoBehaviour
                     {
                         Messenger.Broadcast(Messages.GOO);
                     }
+                    if (mazeLoc == MazeLocation.lore)
+                    {
+                        Dialogue.getInstance().Display(otherGO.GetComponent<Lore>().lore);
+                    }
                 }
                 if (otherMS.mazeLoc == MazeLocation.boss_room)
                 {

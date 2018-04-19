@@ -31,7 +31,8 @@ public enum MazeLocation
     end2,
     end3,
     end4,
-    GOO
+    GOO,
+    lore
 }
 
 public class MazeSection : MonoBehaviour

@@ -55,8 +55,9 @@ public class Dialogue : MonoBehaviour
         foreach (char c in msg)
         {
             dialogueText.text += c;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(2.0f/msg.Length);
         }
+        dialogueText.text += "\n\nPress 'Enter' to Close this Window";
         isPrinting = false;
     }
 
