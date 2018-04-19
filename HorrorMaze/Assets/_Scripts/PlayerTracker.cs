@@ -49,7 +49,7 @@ public class PlayerTracker : MonoBehaviour
                         Messenger.Broadcast(Messages.MAZE_EXPLORED);
                     if (mazeLoc == MazeLocation.GOO)
                     {
-
+                        Messenger.Broadcast(Messages.GOO);
                     }
                 }
                 if (otherMS.mazeLoc == MazeLocation.boss_room)

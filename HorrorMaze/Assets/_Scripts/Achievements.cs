@@ -24,6 +24,7 @@ public class Achievements : WytriamSTD.Scene_Manager
         Messenger.AddListener(Messages.MAZE_EXPLORED, Cartographer);
         Messenger.AddListener(Messages.BOSS_DEFEATED, MazeRunner);
         Messenger.AddListener(Messages.RESPAWN, SomethingWeird);
+        Messenger.AddListener(Messages.GOO, GOO);
     }
 
     // Use this for initialization
