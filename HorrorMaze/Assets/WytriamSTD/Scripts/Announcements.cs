@@ -94,12 +94,14 @@ namespace WytriamSTD
 
         IEnumerator Announcment(string announcement)
         {
+            Messenger.Broadcast(Messages.RETICLE_OFF);
             anncmntText.enabled = true;
             anncmntText.text = announcement;
             if (!announcementLog.Contains(announcement))
                 announcementLog.Add(announcement);
             yield return new WaitForSeconds(announcementDuration);
             anncmntText.enabled = false;
+            Messenger.Broadcast(Messages.RETICLE_ON);
             StopCoroutine(ancmnt);
         }
     }
