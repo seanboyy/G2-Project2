@@ -43,28 +43,6 @@ public class MouseLook : MonoBehaviour
             ToggleCursor();
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            // Spherecast
-            Ray ray = new Ray(gameObject.transform.position, gameObject.transform.forward);
-            RaycastHit hitInfo;
-            Physics.SphereCast(ray, 2f, out hitInfo);
-            if (hitInfo.collider != null)   // we got a hit
-            {
-                Debug.Log("User clicked on " + hitInfo.collider.gameObject.name);
-                GameObject go = hitInfo.collider.gameObject;
-                if (go.tag == "Lore")
-                {
-                    Dialogue.getInstance().Display(go.GetComponent<Lore>().lore);
-                }
-                if (go.tag == "Puzzle")
-                {
-                    go.GetComponent<Puzzle>().door.SetActive(false);
-                }
-            }
-        }
-
-
         // don't let the player move the camera if the cursor is visible
         if (Cursor.visible)
             return;

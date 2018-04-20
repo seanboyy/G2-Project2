@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Puzzle : MonoBehaviour
+public abstract class Puzzle : MonoBehaviour
 {
-    public GameObject door;
+
+    public abstract IEnumerator Move();
 }
