@@ -9,6 +9,12 @@ public class Reticle : MonoBehaviour
     public bool turnReticleOnAtStart = false;
     private Image reticle;
 
+    void Awake()
+    {
+        Messenger.AddListener(Messages.RETICLE_OFF, ReticleOff);
+        Messenger.AddListener(Messages.RETICLE_ON, ReticleOn);
+    }
+
 	// Use this for initialization
 	void Start ()
     {
@@ -28,5 +34,15 @@ public class Reticle : MonoBehaviour
     void ToggleReticle()
     {
         reticle.enabled = !reticle.enabled;          
+    }
+
+    void ReticleOn()
+    {
+        reticle.enabled = true;
+    }
+
+    void ReticleOff()
+    {
+        reticle.enabled = false;
     }
 }
