@@ -27,7 +27,7 @@ public class MouseClick : MonoBehaviour {
                 {
                     Dialogue.getInstance().Display(go.GetComponent<Lore>().lore);
                 }
-                if (go.tag == "Puzzle")
+                if (go.tag == "Button")
                 {
                     StartCoroutine(go.GetComponent<Puzzle>().Move());
                 }
