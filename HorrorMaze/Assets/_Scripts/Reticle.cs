@@ -29,6 +29,12 @@ public class Reticle : MonoBehaviour
     {
         if (Input.GetKeyDown(reticleToggle))
             ToggleReticle();
+
+        if (Dialogue.getInstance().DialogueOpen() || (Cursor.visible && reticle.enabled))
+            ReticleOff();
+
+        else if (!Cursor.visible && !reticle.enabled)
+            ReticleOn();
 	}
 
     void ToggleReticle()

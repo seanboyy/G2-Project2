@@ -40,9 +40,18 @@ public class Dialogue : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Mouse1))
             {
                 ToggleDialogueDisplay();
-                Messenger.Broadcast(Messages.RETICLE_ON);
             }
 	}
+
+    public bool IsPrinting()
+    {
+        return isPrinting;
+    }
+
+    public bool DialogueOpen()
+    {
+        return dialogueText.enabled;
+    }
 
     public void Display(string message)
     {
@@ -53,7 +62,6 @@ public class Dialogue : MonoBehaviour
 
     IEnumerator PrintDisplay(string message)
     {
-        Messenger.Broadcast(Messages.RETICLE_OFF);
         isPrinting = true;
         dialogueText.text = "";
         if (!dialogueBackdrop.enabled)
