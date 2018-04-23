@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Puzzle : MonoBehaviour
+public class Puzzle : MonoBehaviour
 {
-
-    public abstract IEnumerator Move();
+    public IEnumerator Move()
+    {
+        yield return null;
+    }
 }
