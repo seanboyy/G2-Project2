@@ -15,8 +15,8 @@ public class Reticle : MonoBehaviour
         Messenger.AddListener(Messages.RETICLE_ON, ReticleOn);
     }
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start()
     {
         reticle = GetComponentInChildren<Image>();
         if (reticle == null)
@@ -25,21 +25,20 @@ public class Reticle : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
         if (Input.GetKeyDown(reticleToggle))
             ToggleReticle();
+            if (Dialogue.GetInstance() != null && Dialogue.GetInstance().DialogueOpen() || (Cursor.visible && reticle.enabled))
+                ReticleOff();
 
-        if (Dialogue.getInstance().DialogueOpen() || (Cursor.visible && reticle.enabled))
-            ReticleOff();
-
-        else if (!Cursor.visible && !reticle.enabled)
-            ReticleOn();
-	}
+            else if (!Cursor.visible && !reticle.enabled)
+                ReticleOn();
+    }
 
     void ToggleReticle()
     {
-        reticle.enabled = !reticle.enabled;          
+        reticle.enabled = !reticle.enabled;
     }
 
     void ReticleOn()

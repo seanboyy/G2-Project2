@@ -7,7 +7,7 @@ public class Dialogue : MonoBehaviour
 {
     // Singleton Implementation
     private static Dialogue instance;
-    public static Dialogue getInstance() { return instance; }
+    public static Dialogue GetInstance() { return instance; }
 
     private Text dialogueText;
     private Image dialogueBackdrop;

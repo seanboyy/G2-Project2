@@ -25,10 +25,11 @@ public class MouseClick : MonoBehaviour {
                 GameObject go = hitInfo.collider.gameObject;
                 if (go.tag == "Lore")
                 {
-                    Dialogue.getInstance().Display(go.GetComponent<Lore>().lore);
+                    Dialogue.GetInstance().Display(go.GetComponent<Lore>().lore);
                 }
                 if (go.tag == "Button")
                 {
+                    Debug.Log("Clicked a button");
                     StartCoroutine(go.GetComponent<Puzzle>().Move());
                 }
             }

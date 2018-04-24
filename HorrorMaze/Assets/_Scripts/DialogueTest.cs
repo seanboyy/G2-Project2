@@ -15,9 +15,9 @@ public class DialogueTest : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.H))
         {
             Debug.Log("Displaying Dialogue");
-            if (Dialogue.getInstance() == null)
+            if (Dialogue.GetInstance() == null)
                 Debug.Log("Instance is broken.");
-            Dialogue.getInstance().Display("H pressed");
+            Dialogue.GetInstance().Display("H pressed");
         }
 	}
 }
