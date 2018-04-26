@@ -35,48 +35,21 @@ public class Puzzle : MonoBehaviour
     {
         foreach (GameObject bar in bars)
         {
-            if (gameObject.name == "Button")
+            if (bar.name == "Button")
             {
-
+                if (bar.activeInHierarchy)
+                {
+                    bar.SetActive(false);
+                }
+                else
+                {
+                    bar.SetActive(true);
+                }
             }
-            /*
-            switch (bar.GetComponent<Bars>().state)
-            {
-                case States.MOVING_LEFT:
-                case States.STOPPED_LEFT:
-                case States.MOVING_RIGHT:
-                case States.STOPPED_RIGHT:
-                    bar.GetComponent<Bars>().StopAllCoroutines();
-                    StartCoroutine(bar.GetComponent<Bars>().MoveToCenter());
-                    break;
-                case States.MOVING_MIDDLE:
-                case States.STOPPED_MIDDLE:
-                    bar.GetComponent<Bars>().StopAllCoroutines();
-                    if (Random.Range(0F, 1F) > 0.5F)
-                        StartCoroutine(bar.GetComponent<Bars>().MoveToLeft());
-                    else
-                        StartCoroutine(bar.GetComponent<Bars>().MoveToRight());
-                    break;
-
-            }
-            */
             else
             {
-
+                bar.SetActive(true);
             }
-                /*
-                switch (bar.GetComponent<Bars>().state)
-                {
-                    case States.MOVING_LEFT:
-                    case States.STOPPED_LEFT:
-                    case States.MOVING_RIGHT:
-                    case States.STOPPED_RIGHT:
-                        bar.GetComponent<Bars>().StopAllCoroutines();
-                        StartCoroutine(bar.GetComponent<Bars>().MoveToCenter());
-                        break;
-                }
-                */
-
         }
         yield return null;
     }
