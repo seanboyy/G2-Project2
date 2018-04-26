@@ -2916,7 +2916,7 @@ Prefab:
     - target: {fileID: 114832348757336572, guid: 00320ac70830cfe46bcca580fae0f5a8,
         type: 2}
       propertyPath: mazeLoc
-      value: 28
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 4894764241752390, guid: 00320ac70830cfe46bcca580fae0f5a8, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2962,7 +2962,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a653c12432cbe1b478887e692562480f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lore: 'The Lord of the Sea has many teeth. '
+  lore: Then suddenly I saw it. With only a slight churning to mark its rise to the
+    surface, the thing slid into view above the dark waters. Vast, Polyphemus-like,
+    and loathsome, it darted like a stupendous monster of nightmares to the monolith,
+    about which it flung its gigantic scaly arms, the while it bowed its hideous head
+    and gave vent to certain measured sounds. I think I went mad then.
   collected: 0
 --- !u!1001 &189533674
 Prefab:
@@ -4310,7 +4314,11 @@ Prefab:
     - target: {fileID: 114489411435400730, guid: b00d4fc2b3f169e41986a1969198cc37,
         type: 2}
       propertyPath: lore
-      value: 'The Lord of the Sea has many teeth. '
+      value: 'Then suddenly I saw it. With only a slight churning to mark its rise
+        to the surface, the thing slid into view above the dark waters. Vast, Polyphemus-like,
+        and loathsome, it darted like a stupendous monster of nightmares to the monolith,
+        about which it flung its gigantic scaly arms, the while it bowed its hideous
+        head and gave vent to certain measured sounds. I think I went mad then. '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b00d4fc2b3f169e41986a1969198cc37, type: 2}
