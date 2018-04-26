@@ -15,7 +15,6 @@ public class Puzzle : MonoBehaviour
         {
             Debug.Log("Doing");
             StartCoroutine("MoveButton");
-            StartCoroutine("MoveBars");
         }
         yield return null;
     }
@@ -24,6 +23,8 @@ public class Puzzle : MonoBehaviour
     {
         isButtonPressed = true;
         button.transform.position -= new Vector3(0, 0.25F, 0);
+        //Audiosource play sound
+        StartCoroutine("MoveBars");
         yield return new WaitForSeconds(1);
         button.transform.position += new Vector3(0, 0.25F, 0);
         isButtonPressed = false;
@@ -32,8 +33,13 @@ public class Puzzle : MonoBehaviour
 
     public IEnumerator MoveBars()
     {
-        foreach(GameObject bar in bars)
+        foreach (GameObject bar in bars)
         {
+            if (gameObject.name == "Button")
+            {
+
+            }
+            /*
             switch (bar.GetComponent<Bars>().state)
             {
                 case States.MOVING_LEFT:
@@ -46,13 +52,31 @@ public class Puzzle : MonoBehaviour
                 case States.MOVING_MIDDLE:
                 case States.STOPPED_MIDDLE:
                     bar.GetComponent<Bars>().StopAllCoroutines();
-                    if (Random.Range(0F, 1F) > 0.5)
-                        StartCoroutine(bar.GetComponent<Bars>().MoveRight());
+                    if (Random.Range(0F, 1F) > 0.5F)
+                        StartCoroutine(bar.GetComponent<Bars>().MoveToLeft());
                     else
-                        StartCoroutine(bar.GetComponent<Bars>().MoveLeft());
+                        StartCoroutine(bar.GetComponent<Bars>().MoveToRight());
                     break;
 
             }
+            */
+            else
+            {
+
+            }
+                /*
+                switch (bar.GetComponent<Bars>().state)
+                {
+                    case States.MOVING_LEFT:
+                    case States.STOPPED_LEFT:
+                    case States.MOVING_RIGHT:
+                    case States.STOPPED_RIGHT:
+                        bar.GetComponent<Bars>().StopAllCoroutines();
+                        StartCoroutine(bar.GetComponent<Bars>().MoveToCenter());
+                        break;
+                }
+                */
+
         }
         yield return null;
     }
