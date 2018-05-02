@@ -34,7 +34,11 @@ public class MouseClick : MonoBehaviour {
                 }
                 if (go.transform.root.gameObject.tag == "Twist")
                 {
-                    go.transform.root.gameObject.transform.Rotate(0, 90, 0);
+                    go.transform.root.gameObject.transform.gameObject.transform.Rotate(0, 90, 0);
+                    //Debug.Log("Attempting to Twist");
+                    //Twist foo = go.transform.root.gameObject.transform.gameObject.GetComponent<Twist>();
+                    //if (foo != null)
+                    //    foo.TwistLeft();
                 }
             }
         }
