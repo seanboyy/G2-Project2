@@ -51,7 +51,7 @@ public class FootstepSoundFX : MonoBehaviour
 
     void PlayFootstep()
     {
-        Debug.Log("playing sound");
+        //Debug.Log("playing sound");
         speaker.Play();
         footstepIdx = (footstepIdx + 1) % footsteps.Length;
         //speaker.clip = footsteps[footstepIdx];
