@@ -7,10 +7,6 @@ TagManager:
   - Maze
   - Wall
   - Collectible
-  - Eye
-  - Lore
-  - Puzzle
-  - Button
   - Twist
   layers:
   - Default

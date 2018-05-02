@@ -22,14 +22,27 @@ public class MouseClick : MonoBehaviour {
             if (hitInfo.collider != null)   // we got a hit
             {
                 Debug.Log("User clicked on " + hitInfo.collider.gameObject.name);
-                GameObject go = hitInfo.collider.gameObject;
-                if (go.transform.root.gameObject.tag == "Twist")
+                GameObject otherGo = hitInfo.collider.gameObject;
+                GameObject otherParent = otherGo.transform.parent.gameObject;
+                if (otherGo.tag == "Maze")
                 {
-                    go.transform.root.gameObject.transform.gameObject.transform.Rotate(0, 90, 0);
-                    //Debug.Log("Attempting to Twist");
-                    //Twist foo = go.transform.root.gameObject.transform.gameObject.GetComponent<Twist>();
-                    //if (foo != null)
-                    //    foo.TwistLeft();
+                    MazeSection otherMS = otherGo.GetComponent<MazeSection>();
+                    if (otherMS == null) return;
+                    if (otherMS.mazeLoc == MazeLocation.twist)
+                    {
+                        otherGo.transform.Rotate(0, 90, 0);
+                    }
+                }
+                else if (otherParent.tag == "Maze")
+                {
+                    Debug.Log("using parent...");
+                    MazeSection otherMS = otherParent.GetComponent<MazeSection>();
+                    if (otherMS == null) return;
+                    if (otherMS.mazeLoc == MazeLocation.twist)
+                    {
+                        otherParent.transform.Rotate(0, 90, 0);
+                    }
+
                 }
             }
         }
