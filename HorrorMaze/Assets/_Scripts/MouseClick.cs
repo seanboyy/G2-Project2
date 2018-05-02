@@ -16,22 +16,13 @@ public class MouseClick : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             // Spherecast
-            Ray ray = new Ray(gameObject.transform.position, gameObject.transform.forward);
+            Ray ray = new Ray(gameObject.transform.position, Camera.main.gameObject.transform.forward);
             RaycastHit hitInfo;
             Physics.SphereCast(ray, 2f, out hitInfo);
             if (hitInfo.collider != null)   // we got a hit
             {
                 Debug.Log("User clicked on " + hitInfo.collider.gameObject.name);
                 GameObject go = hitInfo.collider.gameObject;
-                if (go.tag == "Lore")
-                {
-                    Dialogue.GetInstance().Display(go.GetComponent<Lore>().lore);
-                }
-                if (go.tag == "Button")
-                {
-                    Debug.Log("Clicked a button");
-                    StartCoroutine(go.GetComponent<Puzzle>().Move());
-                }
                 if (go.transform.root.gameObject.tag == "Twist")
                 {
                     go.transform.root.gameObject.transform.gameObject.transform.Rotate(0, 90, 0);

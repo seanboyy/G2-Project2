@@ -44,21 +44,6 @@ public class PlayerTracker : MonoBehaviour
                 if (visited.Count != 238 && !visited.Contains(otherGO))
                 {
                     visited.Add(otherGO);
-                    // total maze tiles is 238
-                    if (visited.Count == 238)
-                        Messenger.Broadcast(Messages.MAZE_EXPLORED);
-                    if (mazeLoc == MazeLocation.GOO)
-                    {
-                        Messenger.Broadcast(Messages.GOO);
-                    }
-                    if (mazeLoc == MazeLocation.lore)
-                    {
-                        Dialogue.GetInstance().Display(otherGO.GetComponent<Lore>().lore);
-                    }
-                }
-                if (otherMS.mazeLoc == MazeLocation.boss_room)
-                {
-                    Messenger.Broadcast(Messages.BOSS_ROOM);
                 }
             }
         }
