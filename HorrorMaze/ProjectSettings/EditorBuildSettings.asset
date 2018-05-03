@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/maze.unity
+    path: 
     guid: e9929e55a10b56b46a8232a775479718
   - enabled: 1
     path: Assets/WytriamSTD/Scenes/menu.unity
@@ -23,3 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial Puzzle.unity
     guid: d3486048a8caa824ea4c191d2db26ed6
+  - enabled: 1
+    path: Assets/WytriamSTD/Scenes/victory.unity
+    guid: 3f7e52469ea4f514a9dd39299e6bede1

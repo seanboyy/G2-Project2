@@ -1405,7 +1405,13 @@ Prefab:
       propertyPath: m_Name
       value: TwistRoom
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 82336651614957818, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114850032318117344, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1285227754 stripped
@@ -1584,7 +1590,13 @@ Prefab:
       propertyPath: pipPos.y
       value: 100
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 82336651614957818, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114850032318117344, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1362431649 stripped
