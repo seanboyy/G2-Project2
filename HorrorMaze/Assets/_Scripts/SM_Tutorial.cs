@@ -13,13 +13,9 @@ public class SM_Tutorial : WytriamSTD.Scene_Manager {
         Messenger<Vector3>.AddListener(Messages.MOVE_PIP, DoMovePip);
     }
 
-    void DoUnlock()
-    {
-    }
-
     public override void DoEndOfLevel()
     {
-        //do something
+        SceneManager.LoadScene("Puzzle One");
     }
 
     public void DoMovePip(Vector3 newPos)
