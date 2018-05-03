@@ -26,7 +26,10 @@ public class SM_Tutorial : WytriamSTD.Scene_Manager {
 
     public void DoMovePip(Vector3 newPos)
     {
-        PIPcam.orthographicSize = 40;
-        PIPcam.transform.position = newPos;
+        if (PIPcam != null)
+        {
+            PIPcam.orthographicSize = 40;
+            PIPcam.transform.position = newPos;
+        }
     }
 }

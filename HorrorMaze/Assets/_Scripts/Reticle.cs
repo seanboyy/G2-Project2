@@ -29,25 +29,28 @@ public class Reticle : MonoBehaviour
     {
         if (Input.GetKeyDown(reticleToggle))
             ToggleReticle();
-            if (Dialogue.GetInstance() != null && Dialogue.GetInstance().DialogueOpen() || (Cursor.visible && reticle.enabled))
-                ReticleOff();
+        if (Dialogue.GetInstance() != null && Dialogue.GetInstance().DialogueOpen() || (Cursor.visible && reticle.enabled))
+            ReticleOff();
 
-            else if (!Cursor.visible && !reticle.enabled)
-                ReticleOn();
+        else if (!Cursor.visible && !reticle.enabled)
+            ReticleOn();
     }
 
     void ToggleReticle()
     {
-        reticle.enabled = !reticle.enabled;
+        if (reticle != null)
+            reticle.enabled = !reticle.enabled;
     }
 
     void ReticleOn()
     {
-        reticle.enabled = true;
+        if (reticle != null)
+            reticle.enabled = true;
     }
 
     void ReticleOff()
     {
-        reticle.enabled = false;
+        if (reticle != null)
+            reticle.enabled = false;
     }
 }
