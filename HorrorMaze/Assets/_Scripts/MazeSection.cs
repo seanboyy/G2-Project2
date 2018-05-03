@@ -5,7 +5,8 @@ using UnityEngine;
 public enum MazeLocation
 {
     none,
-    twist
+    twist, 
+    pipChange
 }
 
 public class MazeSection : MonoBehaviour
@@ -16,6 +17,8 @@ public class MazeSection : MonoBehaviour
     public GameObject[] linkedSections;
 
     public bool rotRight = false;
+
+    public Vector3 pipPos = new Vector3();
 
     public void Reveal()
     {

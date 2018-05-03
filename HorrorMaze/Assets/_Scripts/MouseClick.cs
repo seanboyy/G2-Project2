@@ -23,13 +23,13 @@ public class MouseClick : MonoBehaviour {
                 {
                     Debug.Log("Using GameObject...");
                     MazeSection otherMS = otherGo.GetComponent<MazeSection>();
-                    DoRotate(otherMS, otherGo);
+                    DoMultiRotate(otherGo);
                 }
                 else if (otherParent.tag == "Maze")
                 {
                     Debug.Log("using parent...");
                     MazeSection otherMS = otherParent.GetComponent<MazeSection>();
-                    DoRotate(otherMS, otherParent);
+                    DoMultiRotate(otherParent);
                 }
             }
         }
@@ -46,15 +46,29 @@ public class MouseClick : MonoBehaviour {
                 GameObject.FindGameObjectWithTag("SceneManager").GetComponent<WytriamSTD.Scene_Manager>().Announce("If the section rotates now, you could\nget stuck in a wall!");
                 return;
             }
-            _object.transform.Rotate(0, -90, 0);
+            if (!section.rotRight)
+                _object.transform.Rotate(0, -90, 0);
+            else
+                _object.transform.Rotate(0, 90, 0);
         }
     }
 
-    void DoMultiRotate(MazeSection[] sections, GameObject[] objects)
+    void DoMultiRotate(GameObject mazeSection)
     {
-        for(int i = 0; i < sections.Length; ++i)
+        MazeSection ms = mazeSection.GetComponent<MazeSection>();
+        if (ms == null) return;
+        if (ms.linkedSections.Length == 0)
+            DoRotate(ms, mazeSection);
+        else
         {
-            DoRotate(sections[i], objects[i]);
+            for (int i = 0; i < ms.linkedSections.Length; ++i)
+            {
+                MazeSection section = ms.linkedSections[i].GetComponent<MazeSection>();
+                if (section != null)
+                {
+                    DoRotate(section, ms.linkedSections[i]);
+                }
+            }
         }
     }
 
