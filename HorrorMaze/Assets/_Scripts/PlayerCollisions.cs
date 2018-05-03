@@ -6,12 +6,10 @@ public class PlayerCollisions : MonoBehaviour
 {
     public MazeLocation mazeLoc;
     private Stack<GameObject> pathToSpawn;
-    private List<GameObject> visited;
 
     void Awake()
     {
         pathToSpawn = new Stack<GameObject>();
-        visited = new List<GameObject>();
     }
 
     void OnTriggerEnter(Collider coll)
@@ -19,7 +17,7 @@ public class PlayerCollisions : MonoBehaviour
         GameObject otherGO = coll.gameObject;
         if (otherGO.tag == "Maze")
         {
-            if (pathToSpawn == null || visited == null)
+            if (pathToSpawn == null)
             {
                 Debug.Log("ERROR - CONTAINERS NOT INITIALIZED.");
                 return;
@@ -38,10 +36,6 @@ public class PlayerCollisions : MonoBehaviour
                 else
                 {
                     pathToSpawn.Push(otherGO);
-                }
-                if (visited.Count != 238 && !visited.Contains(otherGO))
-                {
-                    visited.Add(otherGO);
                 }
             }
         }

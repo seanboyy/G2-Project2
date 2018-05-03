@@ -13,6 +13,8 @@ public class MazeSection : MonoBehaviour
     public bool revealed = false;
     public MazeLocation mazeLoc;
 
+    public GameObject[] linkedSections;
+
     public void Reveal()
     {
         if (revealed) return;
