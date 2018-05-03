@@ -48,9 +48,9 @@ public class PlayerCollisions : MonoBehaviour
         if (otherGO.tag == "Collectible")
         {
             Debug.Log("Player Collected Brass Key");
+            Constants.instance.items.Add("Brass Key");
             Destroy(otherGO);
         }
-
     }
 
     void DoReturnToSpawn()

@@ -7,9 +7,7 @@ using UnityEngine;
 public class Constants : WytriamSTD.Scene_Manager
 {
     public static Constants instance;
-
-    // The collectible to let the player survive the boss encounter
-    public bool hasCollectible = false;
+    public List<string> items;
 
     public int deathCount = 0;
 
@@ -17,7 +15,7 @@ public class Constants : WytriamSTD.Scene_Manager
     {
         if (instance == null)
             instance = this;
-        Messenger.AddListener(Messages.BOSS_ROOM, EnterBossRoom);
+        items = new List<string>();
     }
 
 	// Use this for initialization
@@ -32,17 +30,4 @@ public class Constants : WytriamSTD.Scene_Manager
 		
 	}
 
-    void EnterBossRoom()
-    {
-        if (hasCollectible)
-        {
-            Messenger.Broadcast(Messages.BOSS_DEFEATED);
-        }
-        else
-        {
-            Messenger.Broadcast(Messages.PLAYER_DIED);
-            deathCount++;
-            Debug.Log("Death Count: " + deathCount);
-        }
-    }
 }
