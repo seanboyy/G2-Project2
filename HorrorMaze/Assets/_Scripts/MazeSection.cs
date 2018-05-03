@@ -15,6 +15,8 @@ public class MazeSection : MonoBehaviour
 
     public GameObject[] linkedSections;
 
+    public bool rotRight = false;
+
     public void Reveal()
     {
         if (revealed) return;
