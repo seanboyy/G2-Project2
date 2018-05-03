@@ -26,11 +26,12 @@ public class MouseClick : MonoBehaviour {
                 GameObject otherParent = otherGo.transform.parent.gameObject;
                 if (otherGo.tag == "Maze")
                 {
+                    Debug.Log("Using GameObject...");
                     MazeSection otherMS = otherGo.GetComponent<MazeSection>();
                     if (otherMS == null) return;
                     if (otherMS.mazeLoc == MazeLocation.twist)
                     {
-                        otherGo.transform.Rotate(0, 90, 0);
+                        otherGo.transform.Rotate(0, -90, 0);
                     }
                 }
                 else if (otherParent.tag == "Maze")
@@ -40,7 +41,7 @@ public class MouseClick : MonoBehaviour {
                     if (otherMS == null) return;
                     if (otherMS.mazeLoc == MazeLocation.twist)
                     {
-                        otherParent.transform.Rotate(0, 90, 0);
+                        otherParent.transform.Rotate(0, -90, 0);
                     }
 
                 }
