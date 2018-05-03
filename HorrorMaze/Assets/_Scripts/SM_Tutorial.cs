@@ -14,6 +14,11 @@ public class SM_Tutorial : WytriamSTD.Scene_Manager {
         Messenger<Vector3>.AddListener(Messages.MOVE_PIP, DoMovePip);
     }
 
+    public void Start()
+    {
+
+    }
+
     public override void DoEndOfLevel()
     {
         SceneManager.LoadScene(nextScene);
