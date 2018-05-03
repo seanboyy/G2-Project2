@@ -162,7 +162,8 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114123689371381338, guid: f00d56ac9466bb24a95f5d4892b7bcd5, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f00d56ac9466bb24a95f5d4892b7bcd5, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &166393192 stripped
@@ -499,7 +500,7 @@ GameObject:
   - component: {fileID: 623074160}
   m_Layer: 0
   m_Name: SM_Tutorial
-  m_TagString: Untagged
+  m_TagString: SceneManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

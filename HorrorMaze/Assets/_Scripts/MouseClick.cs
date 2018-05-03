@@ -3,22 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MouseClick : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
+    	
 	// Update is called once per frame
 	void Update ()
     {
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetMouseButtonDown(0))
         {
             // Spherecast
             Ray ray = new Ray(gameObject.transform.position, Camera.main.gameObject.transform.forward);
             RaycastHit hitInfo;
-            Physics.SphereCast(ray, 2f, out hitInfo);
+            Physics.Raycast(ray, out hitInfo);
             if (hitInfo.collider != null)   // we got a hit
             {
                 Debug.Log("User clicked on " + hitInfo.collider.gameObject.name);
@@ -28,25 +23,48 @@ public class MouseClick : MonoBehaviour {
                 {
                     Debug.Log("Using GameObject...");
                     MazeSection otherMS = otherGo.GetComponent<MazeSection>();
-                    if (otherMS == null) return;
-                    if (otherMS.mazeLoc == MazeLocation.twist)
-                    {
-                        otherGo.transform.Rotate(0, -90, 0);
-                    }
+                    DoRotate(otherMS, otherGo);
                 }
                 else if (otherParent.tag == "Maze")
                 {
                     Debug.Log("using parent...");
                     MazeSection otherMS = otherParent.GetComponent<MazeSection>();
-                    if (otherMS == null) return;
-                    if (otherMS.mazeLoc == MazeLocation.twist)
-                    {
-                        otherParent.transform.Rotate(0, -90, 0);
-                    }
-
+                    DoRotate(otherMS, otherParent);
                 }
             }
         }
 
+    }
+
+    void DoRotate(MazeSection section, GameObject _object)
+    {
+        if (section == null) return;
+        if (section.mazeLoc == MazeLocation.twist)
+        {
+            if (!CanRotate(section))
+            {
+                GameObject.FindGameObjectWithTag("SceneManager").GetComponent<WytriamSTD.Scene_Manager>().Announce("If the section rotates now, you could\nget stuck in a wall!");
+                return;
+            }
+            _object.transform.Rotate(0, -90, 0);
+        }
+    }
+
+    void DoMultiRotate(MazeSection[] sections, GameObject[] objects)
+    {
+        for(int i = 0; i < sections.Length; ++i)
+        {
+            DoRotate(sections[i], objects[i]);
+        }
+    }
+
+    bool CanRotate(MazeSection section)
+    {
+        Vector3 pos = transform.position;
+        Vector3 secPos = section.transform.position;
+        //you must be in the center of the section, or entirely outside of it
+        if ((pos.x > secPos.x - 2 && pos.x < secPos.x + 2) && (pos.z > secPos.z - 2 && pos.z < secPos.z + 2) ||
+            ((pos.x > secPos.x + 5 || pos.x < secPos.x - 5) || (pos.z > secPos.z + 5 || pos.z < secPos.z - 5))) return true;
+        return false;
     }
 }

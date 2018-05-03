@@ -9,7 +9,7 @@ public class SM_Tutorial : WytriamSTD.Scene_Manager {
 
     private void Awake()
     {
-        Messenger.AddListener(Messages.TUTORIAL_LOCK_UN, DoUnlock);
+        Messenger.AddListener(Messages.TUTORIAL_UNLOCK, DoUnlock);
     }
 
     void DoUnlock()

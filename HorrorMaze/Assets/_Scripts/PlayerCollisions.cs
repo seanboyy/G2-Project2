@@ -8,6 +8,8 @@ public class PlayerCollisions : MonoBehaviour
     private Stack<GameObject> pathToSpawn;
     private List<GameObject> visited;
 
+    private bool hasBeenTaught;
+
     void Awake()
     {
         pathToSpawn = new Stack<GameObject>();
@@ -61,6 +63,11 @@ public class PlayerCollisions : MonoBehaviour
             Constants.instance.items.Add(otherGO.GetComponent<Trophy>().trophyName);
             Destroy(otherGO);
             GameObject.FindGameObjectWithTag("SceneManager").GetComponent<WytriamSTD.Scene_Manager>().DoEndOfLevel();
+        }
+        if (!hasBeenTaught && otherGO.name.Contains("Twist"))
+        {
+            GameObject.FindGameObjectWithTag("SceneManager").GetComponent<WytriamSTD.Scene_Manager>().Announce("Click on and or around\nareas with darker blue walls.\nThis causes them to rotate");
+            hasBeenTaught = true;
         }
     }
 
