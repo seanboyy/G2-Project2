@@ -47,9 +47,17 @@ public class MouseClick : MonoBehaviour {
                 return;
             }
             if (!section.rotRight)
+            {
                 _object.transform.Rotate(0, -90, 0);
+                section.GetComponent<AudioSource>().volume = 1;
+                section.GetComponent<AudioSource>().Play();
+            }
             else
+            {
                 _object.transform.Rotate(0, 90, 0);
+                section.GetComponent<AudioSource>().volume = 1;
+                section.GetComponent<AudioSource>().Play();
+            }
         }
     }
 
