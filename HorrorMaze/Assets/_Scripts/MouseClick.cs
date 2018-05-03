@@ -22,13 +22,11 @@ public class MouseClick : MonoBehaviour {
                 if (otherGo.tag == "Maze")
                 {
                     Debug.Log("Using GameObject...");
-                    MazeSection otherMS = otherGo.GetComponent<MazeSection>();
                     DoMultiRotate(otherGo);
                 }
                 else if (otherParent.tag == "Maze")
                 {
                     Debug.Log("using parent...");
-                    MazeSection otherMS = otherParent.GetComponent<MazeSection>();
                     DoMultiRotate(otherParent);
                 }
             }
