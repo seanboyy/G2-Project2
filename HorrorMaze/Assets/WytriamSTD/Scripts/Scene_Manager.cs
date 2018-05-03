@@ -11,7 +11,7 @@ using UnityEngine;
 namespace WytriamSTD
 {
 
-    public class Scene_Manager : MonoBehaviour
+    public abstract class Scene_Manager : MonoBehaviour
     {
         //protected WytriamSTD.Constants constants = WytriamSTD.Constants.getInstance();
         //protected WytriamSTD.Announcements announcements = WytriamSTD.Announcements.getInstance();
@@ -22,32 +22,28 @@ namespace WytriamSTD
             Debug.Log("Scene_Manager::Start() - You are using the generic Scene_Manager. Please create a SM_SceneName that inherits from this class instead and override the Start() method.");
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
-        public void announce(string announcement)
+        public void Announce(string announcement)
         {
             //Debug.Log("Scene_Manager::announce() - " + announcement);
             Announcements.getInstance().DisplayAnnouncement(announcement);
         }
 
-        public void announce(string announcement, int duration)
+        public void Announce(string announcement, int duration)
         {
             //Debug.Log("Scene_Manager::announce() - " + announcement);
             Announcements.getInstance().DisplayAnnouncement(announcement, duration);
         }
 
-        public void muteAnnoucements()
+        public void MuteAnnoucements()
         {
             Announcements.getInstance().disableAnnouncements();
         }
 
-        public void hearAnnouncements()
+        public void HearAnnouncements()
         {
             Announcements.getInstance().enableAnnouncements();
         }
+
+        public abstract void DoEndOfLevel();
     }
 }

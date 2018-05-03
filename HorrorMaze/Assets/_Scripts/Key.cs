@@ -5,7 +5,7 @@ using UnityEngine;
 public class Key : MonoBehaviour {
 
     public GameObject _lock;
-    public string name;
+    public string keyName;
 
     private void OnDestroy()
     {

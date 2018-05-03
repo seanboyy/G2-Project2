@@ -14,6 +14,6 @@ public class Lock : MonoBehaviour {
         {
             renderer.sprite = unlockSprite;
         }
-        //change sprite
+        Messenger.Broadcast(Messages.TUTORIAL_LOCK_UN);
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeyBillboard : MonoBehaviour {
+public class Billboard : MonoBehaviour {
 
     public GameObject playerCapsule;
 	
