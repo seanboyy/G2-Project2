@@ -32,8 +32,8 @@ public class PlayerMovement : MonoBehaviour {
         // adapated from https://docs.unity3d.com/ScriptReference/CharacterController.Move.html
         if (allowMovement)
         {
-            if (characterController.isGrounded)
-            {
+            //if (characterController.isGrounded)
+            //{
                 moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
                 moveDirection = transform.TransformDirection(moveDirection);
                 moveDirection *= speed;
@@ -41,9 +41,9 @@ public class PlayerMovement : MonoBehaviour {
                 {
                     moveDirection *= sprintMultiplier;
                 }
-                if (Input.GetButton("Jump"))
+                if (characterController.isGrounded && Input.GetButton("Jump"))
                     moveDirection.y = jumpSpeed;
-            }
+            //}
             moveDirection.y -= gravity * Time.deltaTime;
             characterController.Move(moveDirection * Time.deltaTime);
         }
