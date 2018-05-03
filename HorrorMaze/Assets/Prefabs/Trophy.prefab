@@ -53,7 +53,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4368688126366520}
   - component: {fileID: 65661626641089686}
-  - component: {fileID: 114624802896842896}
   m_Layer: 0
   m_Name: Trophy
   m_TagString: Trophy
@@ -114,18 +113,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.1200013, y: 5.12, z: 0.20000005}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114624802896842896
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1943187875879536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38959a7cafd699c4a8b49dc687e14829, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unlockSprite: {fileID: 21300000, guid: 0632e4863bb502d4e854cce84334ec7b, type: 3}
 --- !u!114 &114841696502708100
 MonoBehaviour:
   m_ObjectHideFlags: 1

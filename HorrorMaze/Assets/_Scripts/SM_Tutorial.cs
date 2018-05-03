@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class SM_Tutorial : WytriamSTD.Scene_Manager {
 
     public Camera PIPcam;
+    public string nextScene = "Puzzle One";
 
     private void Awake()
     {
@@ -15,7 +16,7 @@ public class SM_Tutorial : WytriamSTD.Scene_Manager {
 
     public override void DoEndOfLevel()
     {
-        SceneManager.LoadScene("Puzzle One");
+        SceneManager.LoadScene(nextScene);
     }
 
     public void DoMovePip(Vector3 newPos)
