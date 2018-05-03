@@ -1405,58 +1405,6 @@ Prefab:
       propertyPath: m_Name
       value: TwistRoom
       objectReference: {fileID: 0}
-    - target: {fileID: 4705583262786192, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1993288874531324, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
-      propertyPath: m_TagString
-      value: Maze
-      objectReference: {fileID: 0}
-    - target: {fileID: 1887773968100160, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1993288874531324, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1060895597272846, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1967766525202052, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114621243785703808, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e,
-        type: 2}
-      propertyPath: mazeLoc
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705583262786192, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705583262786192, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 23251870878341922, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 07caa21305cc1114a93a561639b32654, type: 2}
-    - target: {fileID: 23793953960537160, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 07caa21305cc1114a93a561639b32654, type: 2}
-    - target: {fileID: 23352738948778400, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 07caa21305cc1114a93a561639b32654, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
   m_IsPrefabParent: 0
