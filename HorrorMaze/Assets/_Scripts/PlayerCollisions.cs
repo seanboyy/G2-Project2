@@ -39,8 +39,12 @@ public class PlayerCollisions : MonoBehaviour
                 {
                     pathToSpawn.Push(otherGO);
                 }
-            }
 
+                if(mazeLoc == MazeLocation.pipChange)
+                {
+                    Messenger<Vector3>.Broadcast(Messages.MOVE_PIP, otherMS.pipPos);
+                }
+            }
         }
         if (otherGO.tag == "Key")
         {
@@ -53,7 +57,7 @@ public class PlayerCollisions : MonoBehaviour
             Debug.Log("Player opened Lock");
             Destroy(otherGO);
         }
-        if(otherGO.tag == "EOLTrophy")
+        if(otherGO.tag == "Trophy")
         {
             Constants.instance.items.Add(otherGO.GetComponent<Trophy>().trophyName);
             Destroy(otherGO);
