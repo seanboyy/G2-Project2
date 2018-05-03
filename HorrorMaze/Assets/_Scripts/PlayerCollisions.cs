@@ -45,10 +45,15 @@ public class PlayerCollisions : MonoBehaviour
                 }
             }
         }
-        if (otherGO.tag == "Collectible")
+        if (otherGO.tag == "Key")
         {
-            Debug.Log("Player Collected Brass Key");
-            Constants.instance.items.Add("Brass Key");
+            Debug.Log("Player Collected " + otherGO.GetComponent<Key>().name);
+            Constants.instance.items.Add(otherGO.GetComponent<Key>().name);
+            Destroy(otherGO);
+        }
+        if(otherGO.tag == "Lock")
+        {
+            Debug.Log("Player opened Lock");
             Destroy(otherGO);
         }
     }

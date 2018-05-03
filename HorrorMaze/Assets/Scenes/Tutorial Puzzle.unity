@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.4964127, b: 0.5748172, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -155,7 +155,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4507561123726640, guid: f00d56ac9466bb24a95f5d4892b7bcd5, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224914739302358586, guid: f00d56ac9466bb24a95f5d4892b7bcd5,
         type: 2}
@@ -260,6 +260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 421103077}
   - component: {fileID: 421103078}
+  - component: {fileID: 421103079}
   m_Layer: 0
   m_Name: Lock
   m_TagString: Untagged
@@ -294,6 +295,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.1200013, y: 5.12, z: 0.20000005}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &421103079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 421103076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38959a7cafd699c4a8b49dc687e14829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unlockSprite: {fileID: 0}
 --- !u!1 &454777412
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +335,7 @@ Transform:
   - {fileID: 933343055}
   - {fileID: 665387229}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &501423583
 GameObject:
@@ -529,6 +542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 712058430}
   - component: {fileID: 712058431}
+  - component: {fileID: 712058432}
   m_Layer: 0
   m_Name: Key
   m_TagString: Collectible
@@ -563,6 +577,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.33
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &712058432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 712058429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30bcc6d40bfa90d4e87eb56e3d9e7daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lock: {fileID: 421103076}
+  name: 
 --- !u!1 &785422160
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,7 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f0c4f07103b4d840a1cbc09b6b1c60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCapsule: {fileID: 2084975234}
+  playerCapsule: {fileID: 1362431649}
 --- !u!1 &854887400
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,9 +705,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 125451230}
-  m_Father: {fileID: 1017625259}
+  m_Children: []
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -848,7 +874,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &876391024
 MonoBehaviour:
@@ -861,7 +887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45bc456cd2123594596e9e137bae2c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasCollectible: 0
+  items: []
   deathCount: 0
 --- !u!1001 &897562963
 Prefab:
@@ -1171,7 +1197,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &1002221855
 Prefab:
@@ -1836,6 +1862,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1362431649 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1651870981244476, guid: f00d56ac9466bb24a95f5d4892b7bcd5,
+    type: 2}
+  m_PrefabInternal: {fileID: 94987842}
 --- !u!1001 &1390818591
 Prefab:
   m_ObjectHideFlags: 0
@@ -1948,7 +1979,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4694433810401438, guid: ecfb3f22a33acab47a14df7a51441744, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 20774149998904398, guid: ecfb3f22a33acab47a14df7a51441744,
         type: 2}
