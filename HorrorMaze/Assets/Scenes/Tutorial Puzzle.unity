@@ -463,6 +463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PIPcam: {fileID: 1755412072}
+  nextScene: Puzzle One
 --- !u!4 &637415908 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4724406663435596, guid: 00320ac70830cfe46bcca580fae0f5a8,
@@ -1151,23 +1152,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 09a63e9233c739b4885787e67ee554f7, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1003785261 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1993288874531324, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1225514577}
---- !u!114 &1003785262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1003785261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f737b2f6dd4066746a26640beec0773f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  twistDuration: 1
 --- !u!4 &1003785265 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4705583262786192, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e,
@@ -1463,58 +1447,6 @@ Prefab:
       propertyPath: m_Name
       value: TwistRoom
       objectReference: {fileID: 0}
-    - target: {fileID: 4705583262786192, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1993288874531324, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
-      propertyPath: m_TagString
-      value: Maze
-      objectReference: {fileID: 0}
-    - target: {fileID: 1887773968100160, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1993288874531324, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1060895597272846, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1967766525202052, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114621243785703808, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e,
-        type: 2}
-      propertyPath: mazeLoc
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705583262786192, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705583262786192, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 23251870878341922, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 07caa21305cc1114a93a561639b32654, type: 2}
-    - target: {fileID: 23793953960537160, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 07caa21305cc1114a93a561639b32654, type: 2}
-    - target: {fileID: 23352738948778400, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 07caa21305cc1114a93a561639b32654, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08b4812a2ae7bc64bae36fc20f0d9c2e, type: 2}
   m_IsPrefabParent: 0
