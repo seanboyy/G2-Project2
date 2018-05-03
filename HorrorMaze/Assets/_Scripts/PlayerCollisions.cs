@@ -40,6 +40,7 @@ public class PlayerCollisions : MonoBehaviour
                     pathToSpawn.Push(otherGO);
                 }
             }
+
         }
         if (otherGO.tag == "Key")
         {
