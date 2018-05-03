@@ -348,7 +348,6 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1197793303243970}
   m_Enabled: 1
-<<<<<<< HEAD
 --- !u!82 &82367560095420128
 AudioSource:
   m_ObjectHideFlags: 1
@@ -440,8 +439,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90032f6862440394cb2ac590148d9b44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-=======
->>>>>>> 5fba186bdde77784a64246c30e29e0487e312dec
 --- !u!114 &114364285157982702
 MonoBehaviour:
   m_ObjectHideFlags: 1
