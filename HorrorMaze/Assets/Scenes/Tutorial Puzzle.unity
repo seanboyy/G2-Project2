@@ -1192,7 +1192,7 @@ GameObject:
   - component: {fileID: 981203084}
   m_Layer: 0
   m_Name: Trophy
-  m_TagString: Lock
+  m_TagString: Trophy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1203,7 +1203,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 981203082}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -20, y: 2, z: 40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1211,7 +1211,7 @@ Transform:
   - {fileID: 1917702169}
   m_Father: {fileID: 665387229}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &981203084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2148,7 +2148,7 @@ GameObject:
   - component: {fileID: 1565057119}
   m_Layer: 0
   m_Name: Trophy
-  m_TagString: Lock
+  m_TagString: Trophy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2212,7 +2212,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 294539ce65c35b04684c89ffa536f276, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0f852f6aaaf7dde4c95206476db18946, type: 3}
   m_Color: {r: 0.625, g: 0.38539553, b: 0.12867647, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2362,7 +2362,7 @@ GameObject:
   - component: {fileID: 1917702170}
   m_Layer: 8
   m_Name: MapTrophy
-  m_TagString: Lock
+  m_TagString: Trophy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2373,13 +2373,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1917702168}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 10, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 981203083}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &1917702170
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2414,7 +2414,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 294539ce65c35b04684c89ffa536f276, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0f852f6aaaf7dde4c95206476db18946, type: 3}
   m_Color: {r: 0.625, g: 0.38539553, b: 0.12867647, a: 1}
   m_FlipX: 0
   m_FlipY: 0
