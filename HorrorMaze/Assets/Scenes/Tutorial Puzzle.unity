@@ -631,7 +631,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 712058430}
   m_RootOrder: 0
-<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &785422163
 MonoBehaviour:
@@ -744,9 +743,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
-=======
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
->>>>>>> 5fba186bdde77784a64246c30e29e0487e312dec
 --- !u!1 &867881670
 GameObject:
   m_ObjectHideFlags: 0
