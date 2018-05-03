@@ -1806,7 +1806,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 645073926}
-  - component: {fileID: 645073927}
   - component: {fileID: 645073928}
   m_Layer: 0
   m_Name: SM-PuzzleOne
@@ -1828,19 +1827,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &645073927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 645073925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45bc456cd2123594596e9e137bae2c98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items: []
-  deathCount: 0
 --- !u!114 &645073928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1853,7 +1839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PIPcam: {fileID: 33374715}
-  nextScene: Puzzle One
+  nextScene: Menu
 --- !u!1001 &651170097
 Prefab:
   m_ObjectHideFlags: 0

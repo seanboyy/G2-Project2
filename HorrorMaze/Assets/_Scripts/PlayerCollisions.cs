@@ -49,7 +49,6 @@ public class PlayerCollisions : MonoBehaviour
         if (otherGO.tag == "Key")
         {
             Debug.Log("Player Collected " + otherGO.GetComponent<Key>().keyName);
-            Constants.instance.items.Add(otherGO.GetComponent<Key>().keyName);
             Destroy(otherGO);
         }
         if(otherGO.tag == "Lock")
@@ -59,7 +58,6 @@ public class PlayerCollisions : MonoBehaviour
         }
         if(otherGO.tag == "Trophy")
         {
-            Constants.instance.items.Add(otherGO.GetComponent<Trophy>().trophyName);
             Destroy(otherGO);
             GameObject.FindGameObjectWithTag("SceneManager").GetComponent<WytriamSTD.Scene_Manager>().DoEndOfLevel();
         }
